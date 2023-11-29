@@ -1,0 +1,39 @@
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.image-box {
+  width: 100vw; /* Set your desired width */
+  max-height: 500px;
+  height: auto; /* Set your desired height */
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+  margin-top: 60px;
+}
+
+.image-box::before {
+  content: "";
+  display: block;
+  padding-bottom: 66.67%; /* Maintain aspect ratio for 16:9 images */
+}
+
+.image-box .text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.image-box {
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://richmondehoteliloilo.com.ph/wp-content/uploads/2020/06/15-RHI-POOL-1920w.jpg');
+}
+
+@media (min-width: 768px) {
+  .image-box {
+    max-height: 400px;

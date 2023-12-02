@@ -1,4 +1,12 @@
-/* Your existing CSS content */
+:root {
+  --primary-color: #007AF3;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Poppins";
+}
 
 .image-section {
   display: flex;
@@ -32,20 +40,150 @@
   color: white;
 }
 
-.map-section {
+.info-section {
+  display: flex;
+  align-items: center; /* Center items vertically */
   margin-top: 40px;
-  border: 2px solid #ccc; /* Add border style */
-  padding: 10px; /* Add padding for spacing */
+  background-color: #354453;
+  padding: 20px;
+  border: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fbf6ed;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0;
+}
+
+
+.img-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center; /* Center text horizontally */
+}
+
+.img-info img {
+  width: 100%;
+  max-width: 450px; /* Set maximum width for the image */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image within its container */
+}
+
+.text-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center; /* Center text horizontally */
+  order: 2;
+  width: 100%;
+  direction: ltr;
+  
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.info-section .img-info .text-info{
+  display: block;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+  margin: 16px 0;
+}
+
+.text-info p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+.text-info h1 {
+  margin-bottom: 80px;
+}
+@media only screen and (max-width: 768px)
+text-info {
+    padding: 40px 64px;
+    order: 2;
+}
+@media only screen and (max-width: 768px)
+text-info {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.contact-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.contact-left form {
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+.map-section {
+  flex: 1;
+  border: 2px solid #ccc;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  position: absolute;
+}
+
+.contact-section {
+  position: relative;
+  margin-left: 20px;
 }
 
 .map-section iframe {
+  height: 100%;
   width: 100%;
-  height: 450px;
 }
 
-/* Media query for adjusting styles at a certain screen width */
-@media (min-width: 768px) {
-  .image-box {
-    max-height: 400px;
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
   }
 }

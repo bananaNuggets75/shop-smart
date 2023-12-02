@@ -56,7 +56,54 @@ body {
   color: #444;
   letter-spacing: 0;
 }
+.info-section1 .img-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+}
 
+.info-section1 .img-info img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.info-section1 .text-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+  order: 2;
+  width: 100%;
+  direction: ltr;
+}
+
+.info-section2 .img-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+  order: 2;
+}
+
+.info-section2 .img-info img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.info-section2 .text-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+  width: 100%;
+  direction: ltr;
+}
+.info-section2 {
+  flex: wrap;
+}
 
 .img-info {
   flex: 1;
